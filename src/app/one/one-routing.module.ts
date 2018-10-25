@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { OneComponent } from './one.component';
 
 const routes: Routes = [{
   path: '',
-  redirectTo: 'app',
+  redirectTo: 'one',
   pathMatch: 'full'
+}, {
+  path: 'one',
+  component: OneComponent
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class OneRoutingModule { }

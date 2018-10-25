@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TwoComponent } from './two.component';
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: 'two',
+  component: TwoComponent
+}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class TwoRoutingModule { }
