@@ -4,10 +4,6 @@ import { OneComponent } from './one.component';
 
 const routes: Routes = [{
   path: '',
-  redirectTo: 'one',
-  pathMatch: 'full'
-}, {
-  path: 'one',
   component: OneComponent
 }];
 
