@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { AppSharedModule } from '../app-shared.module';
+
 import { OneRoutingModule } from './one-routing.module';
 import { OneComponent } from './one.component';
 
-import { AppSharedModule } from '../app-shared.module';
-
 @NgModule({
   imports: [
+    AppSharedModule,
     CommonModule,
-    OneRoutingModule,
-    AppSharedModule
+    OneRoutingModule
   ],
   declarations: [
     OneComponent
