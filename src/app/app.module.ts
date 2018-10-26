@@ -5,13 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AppComponent } from './app.component';
 
-import { TestComponent } from './mod_two/test/test.component';
-
 @NgModule({
   declarations: [
     NavigationComponent,
-    AppComponent,
-    TestComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
