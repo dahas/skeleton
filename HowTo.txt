@@ -1,0 +1,57 @@
+Creating an Angular app from scratch:
+
+1. Create app with the CLI: 
+
+	$ ng new [AppName] -p [prefix] -is --routing --style=scss
+	
+	Explanation:
+	-p 			Sets an internal prefix to avoid conflicts.
+	-is  		Avoids seperattion of styles
+	--routing	Creates the file with the routing configuration
+	--style		Enable SASS support
+	
+2. Install Bootstrap:
+
+	$ npm install bootstrap --save
+	
+3. Install Font Awesome Free Icons
+
+	$ npm install @fortawesome/fontawesome-free --save
+	
+4. Include Bootstrap base template as index.html. Leave body section empty!
+
+5. Copy and paste content from body section into app.component.html file.
+
+6. In app.component.html replace the dynamic content part with the router-outlet.
+
+7. Create a module for the dynamic content:
+
+	$ ng g m [ModuleName] --routing
+
+8. Create the main component for the module (same name as module):
+
+	$ ng g c [ModuleName]
+	
+9. Prefix module folder with "mod_" and rename import path of module accordingly
+
+10. Create a child component for the module:
+
+	$ cd [ModuleDir]
+	$ ng g c [ComponentName]
+	
+11. Create a directive and place it in a shared folder:
+
+	$ cd [AppDir]
+	$ ng g d shared/zoom
+	
+12. Create a module with shared Modules/Directives/Pipes/... that other modules can import:
+
+	$ ng g class app-shared.module
+	
+	Import NgModule from @angular/core and create decorator.
+	Rename the class to "AppSharedModule"
+	Import and export Modules/Directives/Pipes/... that should be shared.
+	
+
+
+	

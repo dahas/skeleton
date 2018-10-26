@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { OneRoutingModule } from './one-routing.module';
 import { OneComponent } from './one.component';
 
+import { AppSharedModule } from '../app-shared.module';
+
 @NgModule({
   imports: [
     CommonModule,
-    OneRoutingModule
+    OneRoutingModule,
+    AppSharedModule
   ],
   declarations: [
     OneComponent
